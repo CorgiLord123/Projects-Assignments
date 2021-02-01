@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.BuildController"
+      styleClass="root" 
+      spacing="10" prefWidth="500" >
+
+    <stylesheets>
+	<URL value="@computerbuilder.css" />
+    </stylesheets>
+    
+    <TableView fx:id="buildTv" items="${controller.build.parts}">
+        <columns>
+            <TableColumn text="Type">
+                <cellValueFactory><PropertyValueFactory property="type"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Name">
+                <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="priceClm" text="Price"/>
+        </columns>
+    </TableView>
+    <HBox alignment="CENTER_RIGHT" >
+    <Text fx:id="totalCost"/>
+    </HBox>
+    <Button fx:id="CheckBuildBtn" text="Check Build" onAction="#handleCheckBuildBtn"/>
+    <Button fx:id="RemoveFromBuildBtn" disable="true" text="Remove Selected from Build" onAction="#handleRemoveFromBuild"/>
+    <Button fx:id="CloseBuildBtn" text="Close" onAction="#handleCloseBuildBtn"/>
+</VBox>
+
