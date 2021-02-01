@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=ComputerBuilder
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=ComputerBuilder()
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ ComputerBuilder\r\n
+comment3.params=
+comment3.target=void\ use()
+comment4.params=
+comment4.target=void\ openCatalogue()
+comment5.params=
+comment5.target=void\ openBuild()
+comment6.params=
+comment6.target=char\ readChoice()
+comment7.params=
+comment7.target=void\ help()
+numComments=8
